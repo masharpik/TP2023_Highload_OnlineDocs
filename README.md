@@ -279,6 +279,14 @@ Nginx сервера с модулем Nginx Upstream Modules балансиру
 
 ## Физическая схема БД
 
+### Сводная таблица
+Тип | Значение
+:--- | :---:
+Выбор СУБД | PostgeSQL
+Индексы | users.username, comments.video_id, subscribers.author_id, videos.user_id, videos_feed.user_id, likes.video_id, likes.user_id
+Шардинг | по username
+Денормализация | –
+
 ### Привязка к конкретной Базе Данных
 
 Для хранения данных TikTok в качестве СУБД подойдет PostgreSQL для каждой таблицы. Список таблиц, полей и связей между ними представлены в пункте 5.
